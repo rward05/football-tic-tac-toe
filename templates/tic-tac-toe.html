@@ -1,0 +1,68 @@
+{% extends "template.html" %} {% block main %}
+<div class="box">
+    <table>
+        <tr>
+            <th></th>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/arsenal.webp') }}"
+                    height="100px"
+                />
+            </th>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/crystal-palace.webp') }}"
+                    height="100px"
+                />
+            </th>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/everton.png') }}"
+                    height="100px"
+                />
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/man-united.webp') }}"
+                    height="100px"
+                />
+            </th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+        </tr>
+        <tr>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/southampton.png') }}"
+                    height="100px"
+                />
+            </th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+        </tr>
+        <tr>
+            <th>
+                <img
+                    src="{{ url_for('static', filename='images/teams/tottenham.webp') }}"
+                    height="100px"
+                />
+            </th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+            <th onclick="toggle(this)"></th>
+        </tr>
+    </table>
+</div>
+<br /><br />
+<button
+    type="button"
+    class="menu-button"
+    onclick="javascript:document.location.href='/'"
+>
+    Exit
+</button>
+{% endblock %}

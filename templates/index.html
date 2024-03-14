@@ -1,0 +1,16 @@
+{% extends "template.html" %} {% block main %} <br /><br />
+<button type="button" class="menu-button" onclick="javascript:document.location.href='/tic-tac-toe'">
+    <span>Football Tic-Tac-Toe</span>
+    <img src="{{ url_for('static', filename='images/tic-tac-toe.jpg') }}" />
+</button>
+<br /><br />
+<button type="button" class="menu-button" onclick="javascript:document.location.href='/quiz'">
+    <span>Quiz and Compete</span>
+    <img src="{{ url_for('static', filename='images/trophy.png') }}" />
+</button>
+<br /><br />
+<button type="button" class="menu-button" onclick="javascript:document.location.href='/practise'">
+    <span>Practise</span>
+    <img src="{{ url_for('static', filename='images/target.png') }}" />
+</button>
+{% endblock %}

@@ -5,22 +5,22 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return 200
+    return render_template("index.html", logged_in=False)
 
 
 @app.route("/tic-tac-toe")
 def tic_tac_toe():
-    return 200
+    return render_template("tic-tac-toe.html")
 
 
 @app.route("/quiz")
 def quiz():
-    return 200
+    return render_template("quiz.html")
 
 
-@app.route("/practice")
-def practice():
-    return 200
+@app.route("/practise")
+def practise():
+    return render_template("practise.html")
 
 
 @app.route("/login")
@@ -31,6 +31,16 @@ def login():
 @app.route("/signup")
 def signup():
     return 200
+
+
+@app.route("/account")
+def account():
+    return render_template("account.html")
+
+
+@app.route("/help")
+def help():
+    return render_template("help.html")
 
 
 @app.route("/logout")
