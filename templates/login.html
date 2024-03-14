@@ -1,0 +1,17 @@
+{% extends "template.html" %} {% block main %}
+<div class="box">
+    <h1>Login</h1>
+    <form method="POST" action="/login">
+        <label for="username">Username:</label>
+        <input type="text" name="username" autofocus required />
+        <br /><br />
+        <label for="password">Password:</label>
+        <input type="password" name="password" required />
+        <br /><br />
+        <button type="submit">Login</button>
+    </form>
+    {% if error %}
+    <p>Wrong password.</p>
+    {% endif %}
+</div>
+{% endblock %}

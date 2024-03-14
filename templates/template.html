@@ -10,6 +10,7 @@
         <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
     </head>
     <body>
+        {% if not login_page %}
         <header>
             <div class="container">
                 <div class="logo">Footy Quiz</div>
@@ -20,12 +21,13 @@
                         <li><a href="/signup">Signup</a></li>
                         {% elif logged_in %}
                         <li><a href="/account">Account</a></li>
-                        <li><a href="/help">Help</a></li>
                         {% endif %}
+                        <li><a href="/help">Help</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        {% endif %}
 
         <main>
             <div class="container">{% block main %} {% endblock %}</div>
